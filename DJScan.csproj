@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{30EE982D-BC63-48C2-B754-ACAA8AA910FC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DJScan</RootNamespace>
+    <AssemblyName>DJScan</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <AssemblyVersion>1.2015.12.17</AssemblyVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BarcodeImaging">
+      <HintPath>BaseUnit\DLL\BarcodeImaging.dll</HintPath>
+    </Reference>
+    <Reference Include="djFileAccess">
+      <HintPath>..\..\..\Work\元件\DJImage\FileAccess\bin\Debug\djFileAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net20-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="ScalePictureBoxLibrary">
+      <HintPath>..\..\DJEopen\djImage.eOpen\Components\ScalePictureBoxLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseScanSetUI2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BaseScanSetUI2.Designer.cs">
+      <DependentUpon>BaseScanSetUI2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseUnit\BaseScanButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BaseUnit\BaseScanButton.Designer.cs">
+      <DependentUpon>BaseScanButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseUnit\BaseScanSetUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BaseUnit\BaseScanSetUI.Designer.cs">
+      <DependentUpon>BaseScanSetUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseUnit\BaseScanUI1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BaseUnit\BaseScanUI1.Designer.cs">
+      <DependentUpon>BaseScanUI1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseUnit\BaseScanUI4.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BaseUnit\BaseScanUI4.Designer.cs">
+      <DependentUpon>BaseScanUI4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseUnit\BaseScan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BaseUnit\BaseScan.designer.cs">
+      <DependentUpon>BaseScan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseUnit\BaseScanUI3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BaseUnit\BaseScanUI3.Designer.cs">
+      <DependentUpon>BaseScanUI3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseUnit\BaseScanUI2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BaseUnit\BaseScanUI2.Designer.cs">
+      <DependentUpon>BaseScanUI2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseUnit\DJCompression.cs" />
+    <Compile Include="BaseUnit\ImageTools\BaseImg.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BaseUnit\ImageTools\Binarize.cs" />
+    <Compile Include="BaseUnit\ImageTools\DJCommonUnit.cs" />
+    <Compile Include="BaseUnit\ImageTools\DJImageProcess.cs" />
+    <Compile Include="BaseUnit\ImageTools\djPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BaseUnit\ImageTools\djPictureBox.Designer.cs">
+      <DependentUpon>djPictureBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseUnit\ImageView\ucImageView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BaseUnit\ImageView\ucImageView.designer.cs">
+      <DependentUpon>ucImageView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseUnit\ImageView\ucSetManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BaseUnit\ImageView\ucSetManager.Designer.cs">
+      <DependentUpon>ucSetManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseUnit\Twain\GdiPlusLib.cs" />
+    <Compile Include="BaseUnit\Twain\InfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseUnit\Twain\PicForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseUnit\Twain\TwainDefs.cs" />
+    <Compile Include="BaseUnit\Twain\TwainLib.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BaseScanSetUI2.resx">
+      <DependentUpon>BaseScanSetUI2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseUnit\BaseScanButton.resx">
+      <DependentUpon>BaseScanButton.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseUnit\BaseScanSetUI.resx">
+      <DependentUpon>BaseScanSetUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseUnit\BaseScanUI1.resx">
+      <DependentUpon>BaseScanUI1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseUnit\BaseScanUI4.resx">
+      <DependentUpon>BaseScanUI4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseUnit\BaseScan.resx">
+      <DependentUpon>BaseScan.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseUnit\BaseScanUI2.resx">
+      <DependentUpon>BaseScanUI2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseUnit\BaseScanUI3.resx">
+      <DependentUpon>BaseScanUI3.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseUnit\ImageTools\djPictureBox.resx">
+      <DependentUpon>djPictureBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseUnit\ImageView\ucImageView.resx">
+      <DependentUpon>ucImageView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseUnit\ImageView\ucSetManager.resx">
+      <DependentUpon>ucSetManager.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseUnit\Twain\InfoForm.resx">
+      <DependentUpon>InfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseUnit\Twain\PicForm.resx">
+      <DependentUpon>PicForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Scanner-icon.png" />
+    <None Include="Resources\log4net.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\plus_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\1_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\1_left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\1_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\1_up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\minus_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\refresh_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\1yKcmWVt.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\151110_chandick_07.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BaseUnit\DLL\BarcodeImaging.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
