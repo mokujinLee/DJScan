@@ -18,7 +18,7 @@ namespace DJScan
         /// </summary>
         public delegate void UnitFinish();
         public UnitFinish delUnitFinish;
-        public BaseScanUI4()
+        public BaseScanUI4(Form winForm) : base(winForm)
         {
             InitializeComponent();
            

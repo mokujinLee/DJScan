@@ -20,5 +20,10 @@ D:\SVN\DjScan\DJScan\obj\Release\DJScan.ucSetManager.resources
 D:\SVN\DjScan\DJScan\obj\Release\DJScan.BaseScanSetUI2.resources
 D:\SVN\DjScan\DJScan\bin\Release\log4net.dll
 D:\SVN\DjScan\DJScan\bin\Release\log4net.xml
-D:\SVN\DjScan\DJScan\obj\Release\DJScan.csprojResolveAssemblyReference.cache
 D:\SVN\DjScan\DJScan\obj\Release\DJScan.csproj.CoreCompileInputs.cache
+D:\SVN\DjScan\DJScan\obj\Release\DJScan.csprojAssemblyReference.cache
+D:\SVN\DjScan\DJScan\obj\Release\DJScan.csproj.CopyComplete
+D:\SVN\DjScan\DJScan\bin\Release\TwainDotNet.dll
+D:\SVN\DjScan\DJScan\bin\Release\TwainDotNet.WinFroms.dll
+D:\SVN\DjScan\DJScan\bin\Release\TwainDotNet.xml
+D:\SVN\DjScan\DJScan\bin\Release\TwainDotNet.WinFroms.xml

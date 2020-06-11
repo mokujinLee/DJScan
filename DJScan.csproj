@@ -42,8 +42,9 @@
     <Reference Include="djFileAccess">
       <HintPath>..\..\..\Work\元件\DJImage\FileAccess\bin\Debug\djFileAccess.dll</HintPath>
     </Reference>
-    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
-      <HintPath>..\packages\log4net.2.0.8\lib\net20-full\log4net.dll</HintPath>
+    <Reference Include="log4net, Version=1.2.11.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Include\log4net.dll</HintPath>
     </Reference>
     <Reference Include="ScalePictureBoxLibrary">
       <HintPath>..\..\DJEopen\djImage.eOpen\Components\ScalePictureBoxLibrary.dll</HintPath>
@@ -53,6 +54,12 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="TwainDotNet">
+      <HintPath>Include\TwainDotNet.dll</HintPath>
+    </Reference>
+    <Reference Include="TwainDotNet.WinFroms">
+      <HintPath>Include\TwainDotNet.WinFroms.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseScanSetUI2.cs">
@@ -103,6 +110,9 @@
     <Compile Include="BaseUnit\BaseScanUI2.Designer.cs">
       <DependentUpon>BaseScanUI2.cs</DependentUpon>
     </Compile>
+    <Compile Include="BaseUnit\BaseTwain\cBaseTwainScan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="BaseUnit\DJCompression.cs" />
     <Compile Include="BaseUnit\ImageTools\BaseImg.cs">
       <SubType>UserControl</SubType>
@@ -137,6 +147,9 @@
     </Compile>
     <Compile Include="BaseUnit\Twain\TwainDefs.cs" />
     <Compile Include="BaseUnit\Twain\TwainLib.cs" />
+    <Compile Include="cScanBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -222,7 +235,6 @@
     <None Include="Image\refresh_button.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
     <None Include="Resources\1yKcmWVt.jpg" />
   </ItemGroup>
   <ItemGroup>

@@ -13,7 +13,7 @@ namespace DJScan
         /// <summary>
         /// 未完成，
         /// </summary>
-        public BaseScanSetUI2()
+        public BaseScanSetUI2(Form winForm) : base(winForm)
         {
             InitializeComponent();
         }

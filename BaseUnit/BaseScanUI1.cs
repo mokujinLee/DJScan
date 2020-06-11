@@ -15,11 +15,11 @@ namespace DJScan
         /// </summary>
         public List<string> ScanList;
 
-        public BaseScanUI1()
+        public BaseScanUI1(Form winForm) : base(winForm)
         {
             InitializeComponent();
             Form tempfomr = new Form();
-            ScanInit(tempfomr.Handle, tempfomr, "dj");
+            //ScanInit(tempfomr.Handle, tempfomr, "dj");
             ScanComplete += new OnScanCompleteEvent(scanCompleteByPath);
 
 
@@ -48,15 +48,12 @@ namespace DJScan
         }
 
         /// <summary>
-        /// 直接scan
+        /// 直接scan,  直接繼承不用寫?
         /// </summary>
-        public void Scan()
-        {
-            logger.Info("");
-            logger.Info("");
-            logger.Info("BaseScan1.0----------------------------------------");
-            startScan();
-        }
+        //public void Scan()
+        //{
+        //    Scan();
+        //}
 
         private void BaseScanUI1_Load(object sender, EventArgs e)
         {

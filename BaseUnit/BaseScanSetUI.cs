@@ -41,7 +41,8 @@ namespace DJScan
         /// BaseScanSetUI init
         /// </summary>
         /// <param name="SealSetMode">True :顯示自動分配按鈕</param>
-        public BaseScanSetUI(bool SealSetMode = false)
+        //public BaseScanSetUI(bool SealSetMode = false)
+            public BaseScanSetUI(Form winForm) : base(winForm)
         {
             InitializeComponent();
             this.ScanComplete += new DJScan.BaseScan.OnScanCompleteEvent(SetScanComplete);

@@ -1,4 +1,6 @@
-﻿namespace DJScan
+﻿using System.Windows.Forms;
+
+namespace DJScan
 {
     /// <summary>
     /// 基本掃描界面，掃描後的ListBar，顯示ListBar的PictureBox
@@ -6,7 +8,7 @@
     /// </summary>
     public partial class BaseScanUI2 : BaseScanUI1
     {
-        public BaseScanUI2()
+        public BaseScanUI2(Form winForm) : base(winForm)
         {
             InitializeComponent();
             //this.ScanComplete += new OnScanCompleteEvent(ScanComplete2);

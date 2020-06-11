@@ -18,7 +18,8 @@ namespace DJScan
 
         //public bool ReadonlyMode = false;
 
-        BaseScanUI3() { }
+        
+        BaseScanUI3(Form winForm) : base(winForm) { }
         /// <summary>
         /// ID 是否自動旋轉
         /// </summary>
@@ -39,9 +40,10 @@ namespace DJScan
         /// BaseScanUI3 建構式
         /// </summary>
         /// <param name="FileMultiSelect">匯入可否多選</param>
-        public BaseScanUI3(bool FileMultiSelect = false)
+        //public BaseScanUI3(bool FileMultiSelect = false)
+            public BaseScanUI3(Form winForm, bool FileMultiSelect = false) : base(winForm)
         {
-            InitializeComponent();
+            InitializeComponent();            
             //this.ScanComplete += new OnScanCompleteEvent(ScanComplete3);
 
             if (FileMultiSelect)
@@ -88,7 +90,7 @@ namespace DJScan
 
         }
         private void buttonScan_Click(object sender, EventArgs e)
-        {
+        {            
             logger.Info("BaseScan3.按下 掃描");
             Scan();
         }
@@ -117,7 +119,7 @@ namespace DJScan
 
         private void buttonSelectScan_Click(object sender, EventArgs e)
         {
-            this.SelectSrc();
+            this.selectScan();
         }
 
         private void buttonOK_Click(object sender, EventArgs e)
