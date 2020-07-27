@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DJScan</RootNamespace>
     <AssemblyName>DJScan</AssemblyName>
-    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
@@ -44,7 +44,7 @@
     </Reference>
     <Reference Include="log4net, Version=1.2.11.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>Include\log4net.dll</HintPath>
+      <HintPath>..\..\twaindotnet-master\twaindotnet-master\src\TwainDotNet.WinFroms\bin\Debug\log4net.dll</HintPath>
     </Reference>
     <Reference Include="ScalePictureBoxLibrary">
       <HintPath>..\..\DJEopen\djImage.eOpen\Components\ScalePictureBoxLibrary.dll</HintPath>
@@ -54,11 +54,13 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="TwainDotNet">
-      <HintPath>Include\TwainDotNet.dll</HintPath>
+    <Reference Include="TwainDotNet, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d3cd6e1539fa8c71, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\twaindotnet-master\twaindotnet-master\src\TwainDotNet.WinFroms\bin\Debug\TwainDotNet.dll</HintPath>
     </Reference>
-    <Reference Include="TwainDotNet.WinFroms">
-      <HintPath>Include\TwainDotNet.WinFroms.dll</HintPath>
+    <Reference Include="TwainDotNet.WinFroms, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d3cd6e1539fa8c71, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\twaindotnet-master\twaindotnet-master\src\TwainDotNet.WinFroms\bin\Debug\TwainDotNet.WinFroms.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -147,7 +149,7 @@
     </Compile>
     <Compile Include="BaseUnit\Twain\TwainDefs.cs" />
     <Compile Include="BaseUnit\Twain\TwainLib.cs" />
-    <Compile Include="cScanBase.cs">
+    <Compile Include="BaseUnit\BaseTwain\cScanBase.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -242,6 +244,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="BaseUnit\DLL\BarcodeImaging.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Include\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

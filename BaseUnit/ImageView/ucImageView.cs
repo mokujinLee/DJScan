@@ -142,6 +142,7 @@ namespace DJScan
 
         /// <summary>
         /// 載入顯示列(載入string List, 連動picBox)
+        /// 只能載入加密 圖檔
         /// </summary>
         public void reloadImageBarFrom(List<string> allImageList, bool AppendItem = false)
         {
@@ -567,7 +568,7 @@ namespace DJScan
                 flowLayoutPanelImageIcon.Controls.Add(AddImgIcon);
                 #endregion
             }
-            catch (Exception e)
+            catch (Exception )
             {
                 //Console.WriteLine(e.ToString());
                 logger.Error(ImagePath + "載入 icon 失敗 ");

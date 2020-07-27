@@ -11,9 +11,8 @@ namespace DJScan
         public BaseScanUI2(Form winForm) : base(winForm)
         {
             InitializeComponent();
-            //this.ScanComplete += new OnScanCompleteEvent(ScanComplete2);
+            
             ucImageView1.uivIconMouseIn += new DJScan.ucImageView.delIconMouseIn(ImageBarClick);
-
             ucImageView1.delAllIcon = new ucImageView._delAllIcon(delall);
         }
 
@@ -29,7 +28,7 @@ namespace DJScan
 
         void ScanComplete2(object sender)
         {
-            
+            MessageBox.Show("2Test");
         }
 
         void ImageBarClick(System.Drawing.Image clickImage)

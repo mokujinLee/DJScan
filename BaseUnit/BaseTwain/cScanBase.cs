@@ -31,10 +31,15 @@ namespace DJScan
         public static Int64 DJJpgEncodeLevel = 100L;
 
         /// <summary>
-        /// 單次掃描檔 List
+        /// 多次掃描檔 List
         /// (不可為 static ，會造成 不同元件間 的掃描結果 混在一起)
         /// </summary>
         public List<string> DJScanCompletList;
+
+        /// <summary>
+        /// 單次掃描List
+        /// </summary>
+        public List<string> DJOneScanList;
 
         /// <summary>
         /// 圖檔是否加密
@@ -48,10 +53,6 @@ namespace DJScan
         /// </summary>
         public bool ShowUi = false;
 
-        /// <summary>
-        /// 掃描解析度
-        /// </summary>
-        public int DPI = 300;
         #endregion
 
 

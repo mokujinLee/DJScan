@@ -54,8 +54,6 @@ namespace TwainLib
         public bool Init(IntPtr hwndp, bool TWSuccess)
         {
 
-            Console.WriteLine("111111111111111111111111111111");
-
             Finish();
             TwRC rc = DSMparent(appid, IntPtr.Zero, TwDG.Control, TwDAT.Parent, TwMSG.OpenDSM, ref hwndp);
             if (rc == TwRC.Success)
@@ -64,10 +62,6 @@ namespace TwainLib
                 if (rc == TwRC.Success)
                 {
                     hwnd = hwndp;
-                    //capDeviceOnline =new  TwCapability(TwCap.CAP_DEVICEONLINE)
-                    //TwCapability(TwCap..CAP_DEVICEONLINE)
-                    //TwCap
-                    ;
                     TWSuccess = true;
                     return true;
                 }

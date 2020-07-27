@@ -18,14 +18,15 @@ namespace DJScan
 
         //public bool ReadonlyMode = false;
 
-        
+
         BaseScanUI3(Form winForm) : base(winForm) { }
         /// <summary>
         /// ID 是否自動旋轉
         /// </summary>
         public bool RotateID = false;
 
-        public bool EnableImportBtn {
+        public bool EnableImportBtn
+        {
             get
             {
                 return buttonImport.Visible;
@@ -41,11 +42,9 @@ namespace DJScan
         /// </summary>
         /// <param name="FileMultiSelect">匯入可否多選</param>
         //public BaseScanUI3(bool FileMultiSelect = false)
-            public BaseScanUI3(Form winForm, bool FileMultiSelect = false) : base(winForm)
+        public BaseScanUI3(Form winForm, bool FileMultiSelect = false) : base(winForm)
         {
-            InitializeComponent();            
-            //this.ScanComplete += new OnScanCompleteEvent(ScanComplete3);
-
+            InitializeComponent();
             if (FileMultiSelect)
             {
                 openFileDialog1.Multiselect = true;
@@ -64,6 +63,10 @@ namespace DJScan
 
         private void delall()
         {
+
+            DJScanCompletList.Clear();
+            ScanList.Clear();
+
             pictureBoxTopDisplay.Image = null;
             if (delAllIcon != null)
             {
@@ -90,7 +93,7 @@ namespace DJScan
 
         }
         private void buttonScan_Click(object sender, EventArgs e)
-        {            
+        {
             logger.Info("BaseScan3.按下 掃描");
             Scan();
         }
@@ -122,13 +125,51 @@ namespace DJScan
             this.selectScan();
         }
 
+
+        void ResetImgToAB(List<string> imgList)
+        {
+            string sideFileName;
+            bool boolEven = false;
+            string fileName = "";
+            if (imgList.Count > 2)
+            {
+                for (int i = 0; i < imgList.Count; i++)
+                {
+                    #region add ab file end
+                    if (boolEven)
+                    {
+                        sideFileName = "_B";
+                    }
+                    else
+                    {
+                        sideFileName = "_A";
+                        fileName = System.IO.Path.GetFileNameWithoutExtension(imgList[i]);
+
+                    }
+                    imgList[i] = fileName + sideFileName+".jpg";
+
+                    //imgList[i] = "3";
+
+                    boolEven = !boolEven;
+                    #endregion
+
+                }
+            }
+        }
         private void buttonOK_Click(object sender, EventArgs e)
         {
+
+            List<string> aaa = new List<string>();
+            for (int i = 0; i < 10; i++)
+            {
+                aaa.Add(i.ToString());
+            }
+            ResetImgToAB(aaa);
+
             if (delUnitFinish != null)
             {
                 delUnitFinish.Invoke();
             }
-
         }
 
         public void EnableSelectScan(bool BtnVisable = true)

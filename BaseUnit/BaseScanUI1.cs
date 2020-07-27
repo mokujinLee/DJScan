@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace DJScan
@@ -21,8 +22,6 @@ namespace DJScan
             Form tempfomr = new Form();
             //ScanInit(tempfomr.Handle, tempfomr, "dj");
             ScanComplete += new OnScanCompleteEvent(scanCompleteByPath);
-
-
         }
 
         /// <summary>
@@ -33,31 +32,20 @@ namespace DJScan
             DJImgEncrypt = ImgEncrypt;
             ucImageView1.LoadImageDecrypt = DJImgEncrypt;
         }
-
+        
         /// <summary>
         /// 以路徑存放掃描圖檔
         /// </summary>
         /// <param name="sender"></param>
         void scanCompleteByPath(object sender)
         {
-            logger.Info("BaseScan1.掃描 完成,載入 右方顯示列 ");
-            ucImageView1.reloadImageBarFrom(DJScanCompletList, true);
+            ucImageView1.reloadImageBarFrom(DJScanCompletList, false);
             ScanList = ucImageView1.imagePathList;
-            logger.Info("BaseScan1.載入 右方顯示列 完成");
-
         }
 
-        /// <summary>
-        /// 直接scan,  直接繼承不用寫?
-        /// </summary>
-        //public void Scan()
-        //{
-        //    Scan();
-        //}
 
         private void BaseScanUI1_Load(object sender, EventArgs e)
-        {
-
+        {            
         }
     }
 }

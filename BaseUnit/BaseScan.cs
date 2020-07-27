@@ -20,10 +20,10 @@ namespace DJScan
     /// 2.scanInit(IntPtr, Form) 掃描初始化  <br/>
     /// 3.startScan()
     /// </summary>
-    public partial class BaseScan :  cBaseTwainScan.cBaseTwainScan
+    public partial class BaseScan : cBaseTwainScan.cBaseTwainScan
     {
         protected static readonly ILog logger = LogManager.GetLogger(typeof(UserControl));
-        public BaseScan(Form winForm):base(winForm)
+        public BaseScan(Form winForm) : base(winForm)
         {
             InitializeComponent();
 
@@ -45,77 +45,21 @@ namespace DJScan
 
         #region public function
 
-
-
         /// <summary>
         /// ID 是否自動旋轉
         /// </summary>
         public bool IDRotate = true;
-        /// <summary>
-        /// 掃描完成
-        /// </summary>
-        /// <param name="sender"></param>
-        private void djScanComplete(object sender)
-        {
-
-            #region ID 自動旋轉
-            if (IDRotate)
-            {
-                int IDWidth = 361;
-                int IDHeight = 254;
-
-                foreach (var item in DJScanCompletList)
-                {
-                    Bitmap bitmap1;
-                    if (DJImgEncrypt)
-                    {
-                        bitmap1 = (Bitmap)Bitmap.FromStream(djFileAccess.djED.DecryptMemoryStream(item));
-                    }
-                    else
-                    {
-                        bitmap1 = (Bitmap)Bitmap.FromFile(item);
-                    }
-
-                    #region ID 自動轉正 暫時關閉
-                    //if (((bitmap1.Height > (IDHeight - 30)) && (bitmap1.Height < (IDHeight + 30))) &&
-                    // ((bitmap1.Width > (IDWidth - 30)) && (bitmap1.Width < (IDWidth + 30))))
-                    //{
-                    //    bitmap1.RotateFlip(RotateFlipType.Rotate90FlipNone);
-                    //    bitmap1.Save(item);
-                    //} 
-                    #endregion
-                }
-            }
-            #endregion
-
-        }
-
-
-
+               
         #endregion
 
         #region scan
 
-
-        public delegate void OnScanCompleteEvent(object sender);
-        [Description(@"ScanComplete 屬性的值變更時發生")]
-        public event OnScanCompleteEvent ScanComplete;
-        protected virtual void OnScanComplete(object sender)
-        {
-            if (ScanComplete != null)
-            {
-                ScanComplete(sender);
-                logger.Info("BaseScan.3.22.送出完成委派");
-            }
-        }
 
         #endregion
 
         #region ext
         public void SmartImageType(string ImagePath, bool Encode = false)
         {
-
-
             Image i1;
             if (Encode)
             {

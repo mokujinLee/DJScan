@@ -42,7 +42,7 @@ namespace DJScan
         /// </summary>
         /// <param name="SealSetMode">True :顯示自動分配按鈕</param>
         //public BaseScanSetUI(bool SealSetMode = false)
-            public BaseScanSetUI(Form winForm) : base(winForm)
+        public BaseScanSetUI(Form winForm) : base(winForm)
         {
             InitializeComponent();
             this.ScanComplete += new DJScan.BaseScan.OnScanCompleteEvent(SetScanComplete);
@@ -76,7 +76,7 @@ namespace DJScan
 
 
         private void BaseScanSetUI_ImportComplete(object sender)
-        {            
+        {
             ucSetManager1.ucImageView1.reloadImageBarFrom(DJScanCompletList, false);
         }
 

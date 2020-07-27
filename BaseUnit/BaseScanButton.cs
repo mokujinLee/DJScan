@@ -49,8 +49,7 @@ namespace DJScan
 
         private void BaseScanButton_Load(object sender, EventArgs e)
         {
-            Form tempForm = new Form();
-            //ScanInit(tempForm.Handle, tempForm, "dj");
+            Form tempForm = new Form();            
         }
 
         private void buttonBarCodeOK_Click(object sender, EventArgs e)

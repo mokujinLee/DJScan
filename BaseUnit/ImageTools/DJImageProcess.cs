@@ -50,7 +50,7 @@ namespace DJImageTools
                 myBitmap.Save(JpgFile, myImageCodecInfo, myEncoderParameters);
                 if (DJImgEncrypt)
                 {
-                    djFileAccess.djED.EncryptFile(JpgFile, JpgFile);                    
+                    djFileAccess.djED.EncryptFile(JpgFile, JpgFile);
                 }
                 JpgList.Add(JpgFile);
                 myBitmap.Dispose();
@@ -59,6 +59,27 @@ namespace DJImageTools
             foreach (var item in BmpList)
             {
                 File.Delete(item);
+            }
+            return JpgList;
+        }
+
+
+        public static void EncryptJpg(string Jpg, Int64 EncodeLavel, bool DJImgEncrypt = true)
+        {
+            if (DJImgEncrypt)
+            {
+                djFileAccess.djED.EncryptFile(Jpg, Jpg);
+            }
+        }
+
+        public static List<string> EncryptJpgList(List<string> JpgList, Int64 EncodeLavel, bool DJImgEncrypt = true)
+        {
+            if (DJImgEncrypt)
+            {
+                foreach (var item in JpgList)
+                {
+                    djFileAccess.djED.EncryptFile(item, item);
+                }
             }
             return JpgList;
         }

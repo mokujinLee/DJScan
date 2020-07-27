@@ -27,3 +27,6 @@ D:\SVN\DjScan\DJScan\bin\Debug\TwainDotNet.WinFroms.xml
 D:\SVN\DjScan\DJScan\obj\Debug\DJScan.csprojAssemblyReference.cache
 D:\SVN\DjScan\DJScan\obj\Debug\DJScan.csproj.CoreCompileInputs.cache
 D:\SVN\DjScan\DJScan\obj\Debug\DJScan.csproj.CopyComplete
+D:\SVN\DjScan\DJScan\bin\Debug\log4net.xml
+D:\SVN\DjScan\DJScan\bin\Debug\TwainDotNet.pdb
+D:\SVN\DjScan\DJScan\bin\Debug\TwainDotNet.WinFroms.pdb
